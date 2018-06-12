@@ -8451,15 +8451,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11233,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11676,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11730,14 +11730,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11775,6 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1>Presentation Video : <a href = "https://youtu.be/TmmZiRVlmj0"> https://youtu.be/TmmZiRVlmj0</a></h1>
 <h1 id="Context-and-description-of-the-data">Context and description of the data<a class="anchor-link" href="#Context-and-description-of-the-data">&#182;</a></h1><h3 id="1.-Background-information-on-the-subject-and-field-of-study.">1. Background information on the subject and field of study.<a class="anchor-link" href="#1.-Background-information-on-the-subject-and-field-of-study.">&#182;</a></h3><p>The Vinho Verde wine from the Minho region of Portugal accounts for nearly 15% of the total Portuguese wine production and 10% is exported overseas. Three types of variants are typically produced - white, red, and rose; however, for the purpose of our research, we will focus on only the red variant. The data explores various physicochemical properties of white and red variants of the Portuguese “Vinho Verde” wine such as acidity, citric acid, residual sugar, alcohol, and etc. The data also provides sensory data - quality. The output of sensory data (quality) is median of at least 3 professional evaluations from 0 being the worst and 10 being the best. The data consists of 1599 observations and 12 columns.</p>
 <h3 id="2.-Information-about-data-collection.">2. Information about data collection.<a class="anchor-link" href="#2.-Information-about-data-collection.">&#182;</a></h3><p>The data was collected from May 2004 to February 2007 using only wine samples that were certified by the CVRVV (Comissão de Viticultura da Região dos Vinhos Verdes), an interprofessional organization with the goal of improving the quality and marketing of vinho verde. Certification of produced wines is essential for preventing illegal adulteration of wines (health-safety control) and assuring quality control. The data was recorded directly by the organization through a computerized system, which randomly selected wines for laboratory and sensory analysis from producer requests. The variable ‘quality’ was collected through a minimum of three sensory assessors (using bline tastes), which grades the wine in a scale that ranges from 0 (very bad) to 10 (excellent). The median score of the evaluation was used as the final sensory score. Since the sensory score is based upon subjective testing by selective group(professionals, Portugese) the analysis of data may not apply to general or international population. The data was created to find insights such as trends and patterns that can be used to support the wine market growth in Portugal, more specifically, the wine making (quality) and selling (marketing) processes.</p>
 
@@ -11808,7 +11809,7 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 
-<span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">stats</span> 
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">stats</span>
 <span class="n">stats</span><span class="o">.</span><span class="n">chisqprob</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">chisq</span><span class="p">,</span> <span class="n">df</span><span class="p">:</span> <span class="n">stats</span><span class="o">.</span><span class="n">chi2</span><span class="o">.</span><span class="n">sf</span><span class="p">(</span><span class="n">chisq</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
 
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">RandomForestClassifier</span>
@@ -12686,64 +12687,64 @@ We will consider transforming these depending on the type of statistical model w
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>                      fixed acidity  volatile acidity  citric acid  \
-fixed acidity              1.000000         -0.256131     0.671703   
-volatile acidity          -0.256131          1.000000    -0.552496   
-citric acid                0.671703         -0.552496     1.000000   
-residual sugar             0.114777          0.001918     0.143577   
-chlorides                  0.093705          0.061298     0.203823   
-free sulfur dioxide       -0.153794         -0.010504    -0.060978   
-total sulfur dioxide      -0.113181          0.076470     0.035533   
-density                    0.668047          0.022026     0.364947   
-pH                        -0.682978          0.234937    -0.541904   
-sulphates                  0.183006         -0.260987     0.312770   
-alcohol                   -0.061668         -0.202288     0.109903   
-quality                    0.126195         -0.360621     0.217913   
-bound sulfur dioxide      -0.078149          0.097034     0.066776   
+fixed acidity              1.000000         -0.256131     0.671703
+volatile acidity          -0.256131          1.000000    -0.552496
+citric acid                0.671703         -0.552496     1.000000
+residual sugar             0.114777          0.001918     0.143577
+chlorides                  0.093705          0.061298     0.203823
+free sulfur dioxide       -0.153794         -0.010504    -0.060978
+total sulfur dioxide      -0.113181          0.076470     0.035533
+density                    0.668047          0.022026     0.364947
+pH                        -0.682978          0.234937    -0.541904
+sulphates                  0.183006         -0.260987     0.312770
+alcohol                   -0.061668         -0.202288     0.109903
+quality                    0.126195         -0.360621     0.217913
+bound sulfur dioxide      -0.078149          0.097034     0.066776
 
                       residual sugar  chlorides  free sulfur dioxide  \
-fixed acidity               0.114777   0.093705            -0.153794   
-volatile acidity            0.001918   0.061298            -0.010504   
-citric acid                 0.143577   0.203823            -0.060978   
-residual sugar              1.000000   0.055610             0.187049   
-chlorides                   0.055610   1.000000             0.005562   
-free sulfur dioxide         0.187049   0.005562             1.000000   
-total sulfur dioxide        0.203028   0.047400             0.667666   
-density                     0.355283   0.200632            -0.021946   
-pH                         -0.085652  -0.265026             0.070377   
-sulphates                   0.005527   0.371260             0.051658   
-alcohol                     0.042075  -0.221141            -0.069408   
-quality                     0.021784  -0.125326            -0.078917   
-bound sulfur dioxide        0.174529   0.055480             0.425149   
+fixed acidity               0.114777   0.093705            -0.153794
+volatile acidity            0.001918   0.061298            -0.010504
+citric acid                 0.143577   0.203823            -0.060978
+residual sugar              1.000000   0.055610             0.187049
+chlorides                   0.055610   1.000000             0.005562
+free sulfur dioxide         0.187049   0.005562             1.000000
+total sulfur dioxide        0.203028   0.047400             0.667666
+density                     0.355283   0.200632            -0.021946
+pH                         -0.085652  -0.265026             0.070377
+sulphates                   0.005527   0.371260             0.051658
+alcohol                     0.042075  -0.221141            -0.069408
+quality                     0.021784  -0.125326            -0.078917
+bound sulfur dioxide        0.174529   0.055480             0.425149
 
                       total sulfur dioxide   density        pH  sulphates  \
-fixed acidity                    -0.113181  0.668047 -0.682978   0.183006   
-volatile acidity                  0.076470  0.022026  0.234937  -0.260987   
-citric acid                       0.035533  0.364947 -0.541904   0.312770   
-residual sugar                    0.203028  0.355283 -0.085652   0.005527   
-chlorides                         0.047400  0.200632 -0.265026   0.371260   
-free sulfur dioxide               0.667666 -0.021946  0.070377   0.051658   
-total sulfur dioxide              1.000000  0.071269 -0.066495   0.042947   
-density                           0.071269  1.000000 -0.341699   0.148506   
-pH                               -0.066495 -0.341699  1.000000  -0.196648   
-sulphates                         0.042947  0.148506 -0.196648   1.000000   
-alcohol                          -0.205654 -0.496180  0.205633   0.093595   
-quality                          -0.232983 -0.186537 -0.030279   0.252378   
-bound sulfur dioxide              0.957686  0.095135 -0.108053   0.032244   
+fixed acidity                    -0.113181  0.668047 -0.682978   0.183006
+volatile acidity                  0.076470  0.022026  0.234937  -0.260987
+citric acid                       0.035533  0.364947 -0.541904   0.312770
+residual sugar                    0.203028  0.355283 -0.085652   0.005527
+chlorides                         0.047400  0.200632 -0.265026   0.371260
+free sulfur dioxide               0.667666 -0.021946  0.070377   0.051658
+total sulfur dioxide              1.000000  0.071269 -0.066495   0.042947
+density                           0.071269  1.000000 -0.341699   0.148506
+pH                               -0.066495 -0.341699  1.000000  -0.196648
+sulphates                         0.042947  0.148506 -0.196648   1.000000
+alcohol                          -0.205654 -0.496180  0.205633   0.093595
+quality                          -0.232983 -0.186537 -0.030279   0.252378
+bound sulfur dioxide              0.957686  0.095135 -0.108053   0.032244
 
-                       alcohol   quality  bound sulfur dioxide  
-fixed acidity        -0.061668  0.126195             -0.078149  
-volatile acidity     -0.202288 -0.360621              0.097034  
-citric acid           0.109903  0.217913              0.066776  
-residual sugar        0.042075  0.021784              0.174529  
-chlorides            -0.221141 -0.125326              0.055480  
-free sulfur dioxide  -0.069408 -0.078917              0.425149  
-total sulfur dioxide -0.205654 -0.232983              0.957686  
-density              -0.496180 -0.186537              0.095135  
-pH                    0.205633 -0.030279             -0.108053  
-sulphates             0.093595  0.252378              0.032244  
-alcohol               1.000000  0.507839             -0.223203  
-quality               0.507839  1.000000             -0.252754  
-bound sulfur dioxide -0.223203 -0.252754              1.000000  
+                       alcohol   quality  bound sulfur dioxide
+fixed acidity        -0.061668  0.126195             -0.078149
+volatile acidity     -0.202288 -0.360621              0.097034
+citric acid           0.109903  0.217913              0.066776
+residual sugar        0.042075  0.021784              0.174529
+chlorides            -0.221141 -0.125326              0.055480
+free sulfur dioxide  -0.069408 -0.078917              0.425149
+total sulfur dioxide -0.205654 -0.232983              0.957686
+density              -0.496180 -0.186537              0.095135
+pH                    0.205633 -0.030279             -0.108053
+sulphates             0.093595  0.252378              0.032244
+alcohol               1.000000  0.507839             -0.223203
+quality               0.507839  1.000000             -0.252754
+bound sulfur dioxide -0.223203 -0.252754              1.000000
 </pre>
 </div>
 </div>
@@ -14309,22 +14310,22 @@ From the remaining three variables, we will use sulphates for analysis purposes.
 <table class="simpletable">
 <caption>MNLogit Regression Results</caption>
 <tr>
-  <th>Dep. Variable:</th>      <td>quality</td>     <th>  No. Observations:  </th>   <td>  1425</td>  
+  <th>Dep. Variable:</th>      <td>quality</td>     <th>  No. Observations:  </th>   <td>  1425</td>
 </tr>
 <tr>
-  <th>Model:</th>              <td>MNLogit</td>     <th>  Df Residuals:      </th>   <td>  1413</td>  
+  <th>Model:</th>              <td>MNLogit</td>     <th>  Df Residuals:      </th>   <td>  1413</td>
 </tr>
 <tr>
-  <th>Method:</th>               <td>MLE</td>       <th>  Df Model:          </th>   <td>    10</td>  
+  <th>Method:</th>               <td>MLE</td>       <th>  Df Model:          </th>   <td>    10</td>
 </tr>
 <tr>
-  <th>Date:</th>          <td>Sun, 10 Jun 2018</td> <th>  Pseudo R-squ.:     </th>   <td>0.2483</td>  
+  <th>Date:</th>          <td>Sun, 10 Jun 2018</td> <th>  Pseudo R-squ.:     </th>   <td>0.2483</td>
 </tr>
 <tr>
-  <th>Time:</th>              <td>00:11:02</td>     <th>  Log-Likelihood:    </th>  <td> -1064.4</td> 
+  <th>Time:</th>              <td>00:11:02</td>     <th>  Log-Likelihood:    </th>  <td> -1064.4</td>
 </tr>
 <tr>
-  <th>converged:</th>           <td>True</td>       <th>  LL-Null:           </th>  <td> -1416.0</td> 
+  <th>converged:</th>           <td>True</td>       <th>  LL-Null:           </th>  <td> -1416.0</td>
 </tr>
 <tr>
   <th> </th>                      <td> </td>        <th>  LLR p-value:       </th> <td>1.221e-144</td>
@@ -14332,7 +14333,7 @@ From the remaining three variables, we will use sulphates for analysis purposes.
 </table>
 <table class="simpletable">
 <tr>
-        <th>quality=1</th>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+        <th>quality=1</th>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>
 </tr>
 <tr>
   <th>const</th>                <td>   -8.4973</td> <td>    0.921</td> <td>   -9.223</td> <td> 0.000</td> <td>  -10.303</td> <td>   -6.691</td>
@@ -14353,7 +14354,7 @@ From the remaining three variables, we will use sulphates for analysis purposes.
   <th>sulphates</th>            <td>    3.6702</td> <td>    0.564</td> <td>    6.502</td> <td> 0.000</td> <td>    2.564</td> <td>    4.776</td>
 </tr>
 <tr>
-        <th>quality=2</th>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+        <th>quality=2</th>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>
 </tr>
 <tr>
   <th>const</th>                <td>  -20.2845</td> <td>    1.571</td> <td>  -12.915</td> <td> 0.000</td> <td>  -23.363</td> <td>  -17.206</td>
@@ -14418,7 +14419,7 @@ From the remaining three variables, we will use sulphates for analysis purposes.
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Predicted Quality    0    1   2
-Actual Quality                 
+Actual Quality
 0                  491  158   2
 1                  199  342  41
 2                    9  112  71
@@ -14503,22 +14504,22 @@ Actual Quality
 <table class="simpletable">
 <caption>MNLogit Regression Results</caption>
 <tr>
-  <th>Dep. Variable:</th>      <td>quality</td>     <th>  No. Observations:  </th>   <td>  1425</td>  
+  <th>Dep. Variable:</th>      <td>quality</td>     <th>  No. Observations:  </th>   <td>  1425</td>
 </tr>
 <tr>
-  <th>Model:</th>              <td>MNLogit</td>     <th>  Df Residuals:      </th>   <td>  1415</td>  
+  <th>Model:</th>              <td>MNLogit</td>     <th>  Df Residuals:      </th>   <td>  1415</td>
 </tr>
 <tr>
-  <th>Method:</th>               <td>MLE</td>       <th>  Df Model:          </th>   <td>     8</td>  
+  <th>Method:</th>               <td>MLE</td>       <th>  Df Model:          </th>   <td>     8</td>
 </tr>
 <tr>
-  <th>Date:</th>          <td>Sun, 10 Jun 2018</td> <th>  Pseudo R-squ.:     </th>   <td>0.2476</td>  
+  <th>Date:</th>          <td>Sun, 10 Jun 2018</td> <th>  Pseudo R-squ.:     </th>   <td>0.2476</td>
 </tr>
 <tr>
-  <th>Time:</th>              <td>00:11:02</td>     <th>  Log-Likelihood:    </th>  <td> -1065.5</td> 
+  <th>Time:</th>              <td>00:11:02</td>     <th>  Log-Likelihood:    </th>  <td> -1065.5</td>
 </tr>
 <tr>
-  <th>converged:</th>           <td>True</td>       <th>  LL-Null:           </th>  <td> -1416.0</td> 
+  <th>converged:</th>           <td>True</td>       <th>  LL-Null:           </th>  <td> -1416.0</td>
 </tr>
 <tr>
   <th> </th>                      <td> </td>        <th>  LLR p-value:       </th> <td>4.148e-146</td>
@@ -14526,7 +14527,7 @@ Actual Quality
 </table>
 <table class="simpletable">
 <tr>
-        <th>quality=1</th>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+        <th>quality=1</th>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>
 </tr>
 <tr>
   <th>const</th>                <td>   -8.6880</td> <td>    0.903</td> <td>   -9.624</td> <td> 0.000</td> <td>  -10.457</td> <td>   -6.919</td>
@@ -14544,7 +14545,7 @@ Actual Quality
   <th>sulphates</th>            <td>    3.6018</td> <td>    0.559</td> <td>    6.440</td> <td> 0.000</td> <td>    2.506</td> <td>    4.698</td>
 </tr>
 <tr>
-        <th>quality=2</th>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+        <th>quality=2</th>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>
 </tr>
 <tr>
   <th>const</th>                <td>  -19.9914</td> <td>    1.510</td> <td>  -13.241</td> <td> 0.000</td> <td>  -22.950</td> <td>  -17.032</td>
@@ -14697,7 +14698,7 @@ Actual Quality
          Current function value: 0.744184
          Iterations 8
 Predicted Quality    0   1   2
-Actual Quality                
+Actual Quality
 0                  104  33   1
 1                   43  60   9
 2                    2  23  10
@@ -14766,7 +14767,7 @@ Actual Quality
          Current function value: 0.751790
          Iterations 8
 Predicted Quality    0   1   2
-Actual Quality                
+Actual Quality
 0                  106  38   0
 1                   36  59   8
 2                    1  24  13
@@ -14835,7 +14836,7 @@ Actual Quality
          Current function value: 0.742075
          Iterations 8
 Predicted Quality   0   1   2
-Actual Quality               
+Actual Quality
 0                  96  25   1
 1                  47  67  14
 2                   1  20  14
@@ -14904,7 +14905,7 @@ Actual Quality
          Current function value: 0.750782
          Iterations 8
 Predicted Quality   0   1  2
-Actual Quality              
+Actual Quality
 0                  99  25  0
 1                  38  76  5
 2                   3  30  9
@@ -14973,7 +14974,7 @@ Actual Quality
          Current function value: 0.744728
          Iterations 8
 Predicted Quality   0   1   2
-Actual Quality               
+Actual Quality
 0                  90  33   0
 1                  42  71   7
 2                   1  19  22
@@ -15337,7 +15338,7 @@ Our reduced model is the better model.</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Predicted Quality    0    1   2
-Actual Quality                 
+Actual Quality
 0                  135   27   2
 1                   32  105  17
 2                    1   12  34
@@ -15493,6 +15494,7 @@ After running the multinomial logistic regression of our full model (5 variables
 This was further proved during the classification stage, where our reduced model (4 variables) performed better than our full model (5 variables) for both multinomial logistic regression and random forest.<br>
 It is interesting that random forest performed better than our multinomial logistic regression by about 10 percent which is a signficant increase in accuracy considering we only used 4 variables for prediction.</p>
 
+<h1>Presentation Video : <a href = "https://youtu.be/TmmZiRVlmj0"> https://youtu.be/TmmZiRVlmj0</a></h1>
 </div>
 </div>
 </div>
@@ -15509,7 +15511,7 @@ It is interesting that random forest performed better than our multinomial logis
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Data Set: <a href="https://archive.ics.uci.edu/ml/datasets/wine+quality">https://archive.ics.uci.edu/ml/datasets/wine+quality</a></p>
-<p>Relevent Publication Paper: P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties. 
+<p>Relevent Publication Paper: P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties.
 In Decision Support Systems, Elsevier, 47(4):547-553, 2009.</p>
 <p>Background Information: <a href="http://waterhouse.ucdavis.edu/whats-in-wine/">http://waterhouse.ucdavis.edu/whats-in-wine/</a></p>
 
@@ -15520,7 +15522,7 @@ In Decision Support Systems, Elsevier, 47(4):547-553, 2009.</p>
   </div>
 </body>
 
- 
+
 
 
 </html>
